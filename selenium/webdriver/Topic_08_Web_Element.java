@@ -113,6 +113,11 @@ public class Topic_08_Web_Element {
 		//Click vào 1 element: Button/  Link/ Checkbox/ Radio/ Image, Icon....
 		element.click();
 		
+		//Giống hành vi Enter ở các form
+		// Dùng cho tagname: form (element bên trong)
+		element.submit();
+		
+		
 	
 	}
 	
