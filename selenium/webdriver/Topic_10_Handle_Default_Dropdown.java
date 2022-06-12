@@ -1,5 +1,6 @@
 package webdriver;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -36,7 +37,7 @@ public class Topic_10_Handle_Default_Dropdown {
 		day = "20";
 		month = "May";
 		year = "1993";
-		emailAddress = "minhtrang" + "hotmail@.com";
+		emailAddress = "jonhdeep" + generateRandomNumber() + "@gmail.com";
 		companyName = "White House";
 		password = "123456";		
 		
@@ -47,7 +48,7 @@ public class Topic_10_Handle_Default_Dropdown {
 	}
 
 	@Test
-	public void TC_01_() {
+	public void TC_01_NopCommerce() {
 		driver.get("https://demo.nopcommerce.com/register");
 		driver.findElement(By.id("FirstName")).sendKeys(firstName);
 		driver.findElement(By.id("LastName")).sendKeys(lastName);
@@ -91,30 +92,30 @@ public class Topic_10_Handle_Default_Dropdown {
 		driver.findElement(By.id("ConfirmPassword")).sendKeys(password);
 		driver.findElement(By.id("register-button")).click();
 		
-		//II. Verrify
+		//II. Verrify(Output data)
 		
 		Assert.assertEquals(driver.findElement(By.className("result")).getText(), "Your registration completed");
 		
 		driver.findElement(By.className("ico-account")).click();
 		
 		Assert.assertEquals(driver.findElement(By.id("FirstName")).getAttribute("value"), firstName);
+		Assert.assertEquals(driver.findElement(By.id("LastName")).getAttribute("value"), lastName);
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthDay")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(),day);
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthMonth")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(),month);
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthYear")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(),year);
+		
+		
 		Assert.assertEquals(driver.findElement(By.id("Email")).getAttribute("value"), emailAddress);
 		Assert.assertEquals(driver.findElement(By.id("Company")).getAttribute("value"), companyName);
-		Assert.assertEquals(driver.findElement(By.id("Password")).getAttribute("value"), password);
-		Assert.assertEquals(driver.findElement(By.id("Password")).getAttribute("value"), password);
-		Assert.assertEquals(driver.findElement(By.id("Password")).getAttribute("value"), password);
-		
-
 		
 	}
 
-	@Test
-	public void TC_02_() {
-	}
-	
-	@Test
-	public void TC_03_() {
-	}
 
 	@AfterClass
 	public void afterClass() {
@@ -128,6 +129,10 @@ public class Topic_10_Handle_Default_Dropdown {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public int generateRandomNumber() {
+		Random rand = new Random();
+		return rand.nextInt(9999);
 	}
 
 }
