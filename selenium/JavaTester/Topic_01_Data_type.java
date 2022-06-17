@@ -90,5 +90,13 @@ public class Topic_01_Data_type {
 			aOject.toString();
 			
 		}
+		By emailTextboxBy = By.cssSelector("");
+		
+		WebElement emailTextbox = driver.findElement(By.cssSelector(""));
+		
+		List<WebElement> checkboxes = driver.findElements(By.cssSelector(""));
 	}
+	
 
+		
+		

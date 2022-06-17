@@ -51,8 +51,7 @@ public class Topic_12_Button_Radio_Checkbox {
 	
 	@Test
 	public void TC_03_() {
-		for
-	}
+		}
 
 	@AfterClass
 	public void afterClass() {
