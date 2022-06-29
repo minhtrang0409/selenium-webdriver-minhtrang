@@ -20,10 +20,11 @@ public class Topic_17_Fixed_Popup {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	JavascriptExecutor jsExecutor;
-//
+
 	@BeforeClass
 	public void beforeClass() {
 		//SET tương đối: Máy Windows nào cũng chạy được
+		
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		jsExecutor = (JavascriptExecutor) driver;

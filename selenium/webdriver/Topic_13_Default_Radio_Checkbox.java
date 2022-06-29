@@ -26,85 +26,85 @@ public class Topic_13_Default_Radio_Checkbox {
 		
 	}
 
-//	@Test
-//	public void TC_01_Default_checkbox_radio() {
-//		driver.get("https://automationfc.github.io/multiple-fields/");
-//		
-//		//1.Chọn (click)
-//		By Anemia = By.xpath("//input[@value='Anemia']");
-//		By Heart = By.xpath("//input[@value='Heart Disease']");
-//		By Fainting = By.xpath("//input[@value='Fainting Spells']");
-//		
-//		By exercise = By.xpath("//input[@value='3-4 days']");
-//		By eating = By.xpath("//input[@value=\"I don't have a diet plan\"]");
-//		By smoke = By.xpath("//input[@value='0-1 pack/day']");
-//
-//				
-//		driver.findElement(Anemia).click();
-//		driver.findElement(Heart).click();
-//		driver.findElement(Fainting).click();
-//		sleepInSecond(3);
-//		
-//		
-//		driver.findElement(exercise).click();
-//		driver.findElement(eating).click();
-//		driver.findElement(smoke).click();
-//		sleepInSecond(3);
-//		//2.Verify
-//		//Chọn rồi isSelected -> True
-//		Assert.assertTrue(driver.findElement(Anemia).isSelected());
-//		Assert.assertTrue(driver.findElement(Heart).isSelected());
-//		Assert.assertTrue(driver.findElement(Fainting).isSelected());
-//		Assert.assertTrue(driver.findElement(exercise).isSelected());
-//		Assert.assertTrue(driver.findElement(eating).isSelected());
-//		Assert.assertTrue(driver.findElement(smoke).isSelected());
-//		
-//		//Bỏ chọn
-//		driver.findElement(Anemia).click();
-//		driver.findElement(Heart).click();
-//		driver.findElement(Fainting).click();
-//		sleepInSecond(3);
-//		
-//		
-//		driver.findElement(exercise).click();
-//		driver.findElement(eating).click();
-//		driver.findElement(smoke).click();
-//		sleepInSecond(3);
-//		
-//		//Chọn rồi isSelected -> True
-//		Assert.assertFalse(driver.findElement(Anemia).isSelected());
-//		Assert.assertFalse(driver.findElement(Heart).isSelected());
-//		Assert.assertFalse(driver.findElement(Fainting).isSelected());
-//		Assert.assertTrue(driver.findElement(exercise).isSelected());
-//		Assert.assertTrue(driver.findElement(eating).isSelected());
-//		Assert.assertTrue(driver.findElement(smoke).isSelected());
-//
-//		
-//	}
-//
-//	@Test
-//	public void TC_02_Select_all_Checkboxes() {
-//		driver.get("https://automationfc.github.io/multiple-fields/");
-//		
-//		List<WebElement> allcheckboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
-//		//select all
-//		for (WebElement checkbox : allcheckboxes) {
-//			if(!checkbox.isSelected()) {
-//				checkbox.click();
-//				//sleepInSecond(1);
-//				Assert.assertTrue(checkbox.isSelected());
-//			}
-//		}
-//		//Bỏ chọn
-//		for (WebElement checkbox : allcheckboxes) {
-//			if(checkbox.isSelected()) {
-//				checkbox.click();
-//				//sleepInSecond(1);
-//				Assert.assertFalse(checkbox.isSelected());
-//			}
-//		}
-//	}
-//	
+	@Test
+	public void TC_01_Default_checkbox_radio() {
+		driver.get("https://automationfc.github.io/multiple-fields/");
+		
+		//1.Chọn (click)
+		By Anemia = By.xpath("//input[@value='Anemia']");
+		By Heart = By.xpath("//input[@value='Heart Disease']");
+		By Fainting = By.xpath("//input[@value='Fainting Spells']");
+		
+		By exercise = By.xpath("//input[@value='3-4 days']");
+		By eating = By.xpath("//input[@value=\"I don't have a diet plan\"]");
+		By smoke = By.xpath("//input[@value='0-1 pack/day']");
+
+				
+		driver.findElement(Anemia).click();
+		driver.findElement(Heart).click();
+		driver.findElement(Fainting).click();
+		sleepInSecond(3);
+		
+		
+		driver.findElement(exercise).click();
+		driver.findElement(eating).click();
+		driver.findElement(smoke).click();
+		sleepInSecond(3);
+		//2.Verify
+		//Chọn rồi isSelected -> True
+		Assert.assertTrue(driver.findElement(Anemia).isSelected());
+		Assert.assertTrue(driver.findElement(Heart).isSelected());
+		Assert.assertTrue(driver.findElement(Fainting).isSelected());
+		Assert.assertTrue(driver.findElement(exercise).isSelected());
+		Assert.assertTrue(driver.findElement(eating).isSelected());
+		Assert.assertTrue(driver.findElement(smoke).isSelected());
+		
+		//Bỏ chọn
+		driver.findElement(Anemia).click();
+		driver.findElement(Heart).click();
+		driver.findElement(Fainting).click();
+		sleepInSecond(3);
+		
+		
+		driver.findElement(exercise).click();
+		driver.findElement(eating).click();
+		driver.findElement(smoke).click();
+		sleepInSecond(3);
+		
+		//Chọn rồi isSelected -> True
+		Assert.assertFalse(driver.findElement(Anemia).isSelected());
+		Assert.assertFalse(driver.findElement(Heart).isSelected());
+		Assert.assertFalse(driver.findElement(Fainting).isSelected());
+		Assert.assertTrue(driver.findElement(exercise).isSelected());
+		Assert.assertTrue(driver.findElement(eating).isSelected());
+		Assert.assertTrue(driver.findElement(smoke).isSelected());
+
+		
+	}
+
+	@Test
+	public void TC_02_Select_all_Checkboxes() {
+		driver.get("https://automationfc.github.io/multiple-fields/");
+		
+		List<WebElement> allcheckboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
+		//select all
+		for (WebElement checkbox : allcheckboxes) {
+			if(!checkbox.isSelected()) {
+				checkbox.click();
+				//sleepInSecond(1);
+				Assert.assertTrue(checkbox.isSelected());
+			}
+		}
+		//Bỏ chọn
+		for (WebElement checkbox : allcheckboxes) {
+			if(checkbox.isSelected()) {
+				checkbox.click();
+				//sleepInSecond(1);
+				Assert.assertFalse(checkbox.isSelected());
+			}
+		}
+	}
+	
 	@Test
 	public void TC_03_() {
 		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");

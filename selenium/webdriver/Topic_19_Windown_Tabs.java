@@ -184,7 +184,7 @@ public class Topic_19_Windown_Tabs {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	public void sleepInSecond(long timeInsecond) {
