@@ -57,9 +57,6 @@ public class Topic_21_Upload_File {
 //		System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\msedgedriver.exe");
 //		driver = new EdgeDriver();
 		
-		
-		
-		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		System.out.println(Dreampath);

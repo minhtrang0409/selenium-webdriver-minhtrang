@@ -95,6 +95,9 @@ public class Topic_24_Explicit_Wait {
 		Assert.assertTrue(todaySelected.isDisplayed());
 
 	}
+	public void TC_05_Uploadfile() {
+		expliciteWait = new WebDriverWait(driver, 30);
+	}
 
 
 	@AfterClass
